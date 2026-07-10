@@ -8,7 +8,14 @@ If you're seeing this, you've probably already done this step. Congrats!
 
 ```sh
 # create a new project
-pnx sv create my-app
+npx sv create my-app
+```
+
+To recreate this project with the same configuration:
+
+```sh
+# recreate this project
+pnpm dlx sv@0.16.2 create --template minimal --types ts --add prettier eslint vitest="usages:unit,component" playwright tailwindcss="plugins:typography,forms" sveltekit-adapter="adapter:vercel" drizzle="database:postgresql+postgresql:neon" better-auth="demo:password" paraglide="languageTags:en, es, de+demo:yes" --install pnpm recipisi
 ```
 
 ## Developing
@@ -16,10 +23,10 @@ pnx sv create my-app
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
 ```sh
-pnpm run dev
+npm run dev
 
 # or start the server and open the app in a new browser tab
-pnpm run dev -- --open
+npm run dev -- --open
 ```
 
 ## Building
@@ -27,7 +34,7 @@ pnpm run dev -- --open
 To create a production version of your app:
 
 ```sh
-pnpm run build
+npm run build
 ```
 
 You can preview the production build with `npm run preview`.
