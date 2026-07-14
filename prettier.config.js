@@ -2,9 +2,11 @@
 const config = {
 	useTabs: true,
 	singleQuote: true,
-	trailingComma: 'none',
+	trailingComma: 'all',
+	semi: false,
 	printWidth: 100,
 	plugins: ['prettier-plugin-svelte', 'prettier-plugin-tailwindcss'],
+	proseWrap: 'always',
 	overrides: [{ files: '*.svelte', options: { parser: 'svelte' } }],
 	tailwindStylesheet: './src/routes/layout.css',
 }
